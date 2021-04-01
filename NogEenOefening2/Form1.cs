@@ -36,5 +36,10 @@ namespace NogEenOefening2
             temp += $"{buttons.Text}\n";
             return temp;
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

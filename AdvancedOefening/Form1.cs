@@ -68,7 +68,7 @@ namespace AdvancedOefening
                 {
                     case DialogResult.OK:
 
-                    werkgevers[cbBox.SelectedIndex].Werknemers.Add(new Werknemer(new Salaris(form2.MaandContract, form2.BrutoLoon), form2.Naam, form2.LandVanHerkomst));
+                        werkgevers[cbBox.SelectedIndex].Werknemers.Add(new Werknemer(new Salaris(form2.MaandContract, form2.BrutoLoon), form2.Naam, form2.LandVanHerkomst));
                         cbBoxWerknemers.DataSource = null;
                         cbBoxWerknemers.DataSource = werkgevers[cbBox.SelectedIndex].Werknemers;
                         cbBoxWerknemers.DisplayMember = nameof(Werknemer.Naam);
@@ -83,6 +83,11 @@ namespace AdvancedOefening
             cbBoxWerknemers.DataSource = null;
             cbBoxWerknemers.DataSource = werkgevers[cbBox.SelectedIndex].Werknemers;
             cbBoxWerknemers.DisplayMember = nameof(Werknemer.Naam);
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
